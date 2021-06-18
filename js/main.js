@@ -15,3 +15,7 @@ const greetDevelopers = (list) => {
     list.forEach(x => x.greeting = `Hi ${x.firstName}, what do you like the most about ${x.language}?`)
     return list
   }
+
+// Coding Meetup #3 - Higher-Order Functions Series - Is Ruby coming?
+
+const isRubyComing = (list) => list.some(x => x.language === 'Ruby')
