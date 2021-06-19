@@ -19,3 +19,10 @@ const greetDevelopers = (list) => {
 // Coding Meetup #3 - Higher-Order Functions Series - Is Ruby coming?
 
 const isRubyComing = (list) => list.some(x => x.language === 'Ruby')
+
+// Coding Meetup #4 - Higher-Order Functions Series - Find the first Python developer
+
+const getFirstPython = (list) => {
+  let a = list.find(x => x.language === 'Python')
+  return a ? `${a.firstName}, ${a.country}` : 'There will be no Python developers'
+}
