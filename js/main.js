@@ -26,3 +26,11 @@ const getFirstPython = (list) => {
   let a = list.find(x => x.language === 'Python')
   return a ? `${a.firstName}, ${a.country}` : 'There will be no Python developers'
 }
+
+// Coding Meetup #5 - Higher-Order Functions Series - Prepare the count of languages
+
+const countLanguages = (list) => {
+  const obj = {}
+  list.map(v => obj [v.language] = (obj [v.language] || 0) + 1)
+  return obj
+}
