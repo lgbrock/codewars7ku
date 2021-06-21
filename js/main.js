@@ -34,3 +34,10 @@ const countLanguages = (list) => {
   list.map(v => obj [v.language] = (obj [v.language] || 0) + 1)
   return obj
 }
+
+// Coding Meetup #6 - Higher-Order Functions Series - Can they code in the same language?
+
+const isSameLanguage = (list) => {
+  const lang = list[0].language
+  return list.every(a => a.language === lang)
+}
