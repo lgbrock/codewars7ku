@@ -56,4 +56,4 @@ const findSenior = (list) => {
 	return list.filter((a) => a.age === max);
 };
 
-// Another quick update while on break
+// One more update
