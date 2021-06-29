@@ -56,4 +56,6 @@ const findSenior = (list) => {
 	return list.filter((a) => a.age === max);
 };
 
-// Last quick update
+// Coding Meetup #8 - Higher-Order Functions Series - Will all continents be represented?
+const allContinents = (list) => ["Africa", "Americas", "Asia", "Europe", "Oceania"].every(x =>
+    list.some(y => x == y.continent))
