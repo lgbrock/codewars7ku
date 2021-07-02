@@ -80,3 +80,5 @@ const isAgeDiverse = (list) => {
 	});
 	return check.every((v) => v === 1);
 };
+
+// Quick update
