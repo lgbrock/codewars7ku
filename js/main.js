@@ -81,4 +81,15 @@ const isAgeDiverse = (list) => {
 	return check.every((v) => v === 1);
 };
 
-// Quick update
+// Coding Meetup #10 - Higher-Order Functions Series - Create usernames
+const addUsername = (list) => {
+	return list.map((v) => {
+		return {
+			...v,
+			username:
+				v.firstName.toLowerCase() +
+				v.lastName.slice(0, 1).toLowerCase() +
+				(Date.prototype.getFullYear() - v.age).toString(),
+		};
+	});
+};
