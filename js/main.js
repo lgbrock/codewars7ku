@@ -94,4 +94,9 @@ const addUsername = (list) => {
 	});
 };
 
-// Quick update until later
+// Coding Meetup #11 - Higher-Order Functions Series - Find the average age
+const getAverageAge = (list) => {
+	let age = 0;
+	list.map((v) => (age += v.age));
+	return Math.round(age / list.length);
+};
