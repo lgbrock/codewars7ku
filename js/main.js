@@ -100,3 +100,7 @@ const getAverageAge = (list) => {
 	list.map((v) => (age += v.age));
 	return Math.round(age / list.length);
 };
+
+// Coding Meetup #12 - Higher-Order Functions Series - Find GitHub admins
+const findAdmin = (list, lang) =>
+	list.filter((v) => v.language === lang && v.githubAdmin === 'yes');
