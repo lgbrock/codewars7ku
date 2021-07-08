@@ -104,3 +104,6 @@ const getAverageAge = (list) => {
 // Coding Meetup #12 - Higher-Order Functions Series - Find GitHub admins
 const findAdmin = (list, lang) =>
 	list.filter((v) => v.language === lang && v.githubAdmin === 'yes');
+
+// Disemvowel Trolls
+const disemvowel = (str) => str.replace(/[aeiou]/gi, '');
