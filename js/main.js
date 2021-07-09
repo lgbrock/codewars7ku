@@ -107,3 +107,6 @@ const findAdmin = (list, lang) =>
 
 // Disemvowel Trolls
 const disemvowel = (str) => str.replace(/[aeiou]/gi, '');
+
+// Youre a square!
+const isSquare = (n) => Math.sqrt(n) % 1 === 0;
