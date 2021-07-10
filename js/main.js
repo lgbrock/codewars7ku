@@ -110,3 +110,10 @@ const disemvowel = (str) => str.replace(/[aeiou]/gi, '');
 
 // Youre a square!
 const isSquare = (n) => Math.sqrt(n) % 1 === 0;
+
+// Mumbling
+const accum = (s) =>
+	s
+		.split('')
+		.map((c, i) => c.toUpperCase() + c.toLowerCase().repeat(i))
+		.join('-');
