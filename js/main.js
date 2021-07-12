@@ -120,3 +120,9 @@ const accum = (s) =>
 
 // Descending Order
 const descendingOrder = (n) => +(n + '').split('').sort().reverse().join('');
+
+// Sum of array singles
+const repeats = (arr) =>
+	arr
+		.filter((value, _, arr) => arr.indexOf(value) === arr.lastIndexOf(value))
+		.reduce((a, b) => a + b, 0);
