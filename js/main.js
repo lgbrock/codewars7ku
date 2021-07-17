@@ -127,4 +127,13 @@ const repeats = (arr) =>
 		.filter((value, _, arr) => arr.indexOf(value) === arr.lastIndexOf(value))
 		.reduce((a, b) => a + b, 0);
 
-// quick update
+// Coding Meetup #13 - Higher-Order Functions Series - Is the meetup language-diverse?
+const isLanguageDiverse = (list) => {
+	let arr = list.map((v) => v.language);
+	let obj = {};
+
+	arr.map((v) => (obj[v] = obj[v] ? obj[v] + 1 : 1));
+	const count = Object.values(obj).sort((a, b) => b - a);
+	const max = count.splice(0, 1);
+	return count.every((v) => v * 2 >= max);
+};
