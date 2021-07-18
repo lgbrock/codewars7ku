@@ -137,3 +137,10 @@ const isLanguageDiverse = (list) => {
 	const max = count.splice(0, 1);
 	return count.every((v) => v * 2 >= max);
 };
+
+// Coding Meetup #14 - Higher-Order Functions Series - Order the food
+const orderFood = (list) => {
+	const obj = {};
+	list.map((v) => (obj[v.meal] = obj[v.meal] ? obj[v.meal] + 1 : 1));
+	return obj;
+};
