@@ -144,3 +144,10 @@ const orderFood = (list) => {
 	list.map((v) => (obj[v.meal] = obj[v.meal] ? obj[v.meal] + 1 : 1));
 	return obj;
 };
+
+// Coding Meetup #15 - Higher-Order Functions Series - Find the odd names
+const findOddNames = (list) => {
+	return list.filter(
+		(v) => v.firstName.split``.reduce((a, b) => a + b.charCodeAt(), 0) % 2 !== 0
+	);
+};
