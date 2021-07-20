@@ -151,3 +151,17 @@ const findOddNames = (list) => {
 		(v) => v.firstName.split``.reduce((a, b) => a + b.charCodeAt(), 0) % 2 !== 0
 	);
 };
+
+// Coding Meetup #16 - Higher-Order Functions Series - Ask for missing details
+const askForMissingDetails = (list) => {
+	let arr = [];
+	list.map((list) => {
+		for (let i in list) {
+			if (list[i] === null) {
+				list = { ...list, question: `Hi, could you please provide your ${i}.` };
+				arr.push(list);
+			}
+		}
+	});
+	return arr;
+};
