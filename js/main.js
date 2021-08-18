@@ -185,3 +185,12 @@ const solution = (number) => {
 	}
 	return [...new Set(arr)].reduce((a, b) => a + b, 0);
 };
+
+// Find the odd int
+const findOdd = (A) => {
+	let count = {};
+	A.map((v) => (count[v] = count[v] ? count[v] + 1 : 1));
+	return +Object.keys(count).find(key => count[key] % 2 === 1);
+}
+
+const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
