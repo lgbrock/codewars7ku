@@ -190,7 +190,18 @@ const solution = (number) => {
 const findOdd = (A) => {
 	let count = {};
 	A.map((v) => (count[v] = count[v] ? count[v] + 1 : 1));
-	return +Object.keys(count).find(key => count[key] % 2 === 1);
-}
+	return +Object.keys(count).find((key) => count[key] % 2 === 1);
+};
 
 const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
+
+// Create Phone Number
+const createPhoneNumber = (n) => {
+	let format = '(xxx) xxx-xxxx';
+
+	for (var i = 0; i < n.length; i++) {
+		format = format.replace('x', n[i]);
+	}
+
+	return format;
+};
