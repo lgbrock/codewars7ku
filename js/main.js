@@ -218,3 +218,12 @@ const likes = (names) => {
 
 // Square Every Digit
 const squareDigits = (num) => +num.toString().split``.map((v) => v * v).join``
+
+// Get the Middle Character 
+const getMiddle = (s) => {
+	let mid = Math.floor(s.length / 2);
+	if (s.length % 2 === 0) {
+		return s.substr(mid - 1, 2);
+	}
+	return s.substr(mid, 1);
+}
