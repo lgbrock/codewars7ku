@@ -215,3 +215,6 @@ const likes = (names) => {
 		return `${names[0]}, ${names[1]} and ${names[2]} like this`;
 	return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
 };
+
+// Square Every Digit
+const squareDigits = (num) => +num.toString().split``.map((v) => v * v).join``
