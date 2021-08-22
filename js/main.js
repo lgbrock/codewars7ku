@@ -227,3 +227,6 @@ const getMiddle = (s) => {
 	}
 	return s.substr(mid, 1);
 }
+
+// Array.diff
+const arrayDiff = (a, b) => a.filter((v) => b.indexOf(v) === -1);
