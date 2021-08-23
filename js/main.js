@@ -233,3 +233,10 @@ const arrayDiff = (a, b) => a.filter((v) => b.indexOf(v) === -1);
 
 // Shortest Word
 const findShort = (s) => Math.min(...s.split` `.map((s) => s.length));
+
+// Find The Parity Outlier
+const findOutlier = (int) => {
+	let even = int.filter((v) => v % 2 === 0);
+	let odd = int.filter((v) => v % 2 !== 0);
+	return even.length === 1 ? even[0] : odd[0];
+};
