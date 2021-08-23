@@ -217,16 +217,19 @@ const likes = (names) => {
 };
 
 // Square Every Digit
-const squareDigits = (num) => +num.toString().split``.map((v) => v * v).join``
+const squareDigits = (num) => +num.toString().split``.map((v) => v * v).join``;
 
-// Get the Middle Character 
+// Get the Middle Character
 const getMiddle = (s) => {
 	let mid = Math.floor(s.length / 2);
 	if (s.length % 2 === 0) {
 		return s.substr(mid - 1, 2);
 	}
 	return s.substr(mid, 1);
-}
+};
 
 // Array.diff
 const arrayDiff = (a, b) => a.filter((v) => b.indexOf(v) === -1);
+
+// Shortest Word
+const findShort = (s) => Math.min(...s.split` `.map((s) => s.length));
