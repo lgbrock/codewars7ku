@@ -240,3 +240,16 @@ const findOutlier = (int) => {
 	let odd = int.filter((v) => v % 2 !== 0);
 	return even.length === 1 ? even[0] : odd[0];
 };
+
+// Counting Duplicates
+const duplicateCount = (text) => {
+	let arr = text.toLowerCase().split``;
+	let obj = {};
+	let count = 0;
+
+	arr.map((v) => (obj[v] = obj[v] ? obj[v] + 1 : 1));
+	for (let key in obj) {
+		if (obj[key] > 1) count++;
+	}
+	return count;
+}
