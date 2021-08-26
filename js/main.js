@@ -252,4 +252,14 @@ const duplicateCount = (text) => {
 		if (obj[key] > 1) count++;
 	}
 	return count;
-}
+};
+
+// Duplicate Encoder
+const duplicateEncode = (word) =>
+	word
+		.toLowerCase()
+		.split('')
+		.map((v, i, arr) => {
+			return arr.indexOf(v) == arr.lastIndexOf(v) ? '(' : ')';
+		})
+		.join('');
