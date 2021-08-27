@@ -279,3 +279,11 @@ const persistence = (num) => {
 	}
 	return times;
 };
+
+// Replace With Alphabet Position
+const alphabetPosition = (text) =>
+	text
+		.split('')
+		.filter((v) => /[a-zA-Z]/.test(v))
+		.map((v) => v.toLowerCase().charCodeAt(0) - 96)
+		.join(' ');
