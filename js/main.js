@@ -287,3 +287,13 @@ const alphabetPosition = (text) =>
 		.filter((v) => /[a-zA-Z]/.test(v))
 		.map((v) => v.toLowerCase().charCodeAt(0) - 96)
 		.join(' ');
+
+// Your order, please
+const order = (words) => {
+	return words
+		.split(' ')
+		.sort((a, b) => {
+			return a.match(/\d/) - b.match(/\d/);
+		})
+		.join(' ');
+};
