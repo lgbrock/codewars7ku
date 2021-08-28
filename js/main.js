@@ -297,3 +297,12 @@ const order = (words) => {
 		})
 		.join(' ');
 };
+
+// Is this a triangle?
+const triangle = (a, b, c) => {
+	if (a + b <= c || a + c <= b || b + c <= a) return false;
+	return true;
+}
+
+// Simple Pig Latin
+const pigIt = (str) => str.split` `.map((v) => v.slice(1) + v[0] + 'ay').join` `;
