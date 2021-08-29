@@ -313,3 +313,10 @@ const pigIt = (str) => {
 
 // Credit Card Mask
 const maskify = (cc) => cc.replace(/.(?=.{4})/g, '#');
+
+// Exes and Ohs
+const XO = (str) => {
+	let x = str.match(/x/gi);
+	let o = str.match(/o/gi);
+	return (x && x.length) === (o && o.length);
+}
