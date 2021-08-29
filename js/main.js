@@ -305,5 +305,11 @@ const triangle = (a, b, c) => {
 };
 
 // Simple Pig Latin
-const pigIt = (str) =>
-	str.split` `.map((v) => v.slice(1) + v[0] + 'ay').join` `;
+const pigIt = (str) => {
+	return str.replace(/\w+/g, (w) => {
+		return w.slice(1) + w[0] + 'ay';
+	});
+};
+
+// Credit Card Mask
+const maskify = (cc) => cc.replace(/.(?=.{4})/g, '#');
