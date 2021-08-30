@@ -320,3 +320,6 @@ const XO = (str) => {
 	let o = str.match(/o/gi);
 	return (x && x.length) === (o && o.length);
 }
+
+// Isograms
+const isIsogram = (str) => !str.match(/(\w).*\1/i);
