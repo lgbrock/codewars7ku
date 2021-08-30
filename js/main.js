@@ -323,3 +323,13 @@ const XO = (str) => {
 
 // Isograms
 const isIsogram = (str) => !str.match(/(\w).*\1/i);
+
+// Bit Counting
+const countBits = (n) => {
+	let count = 0;
+	while (n > 0) {
+		count += n % 2;
+		n = Math.floor(n / 2);
+	}
+	return count;
+}
