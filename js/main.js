@@ -333,3 +333,6 @@ const countBits = (n) => {
 	}
 	return count;
 }
+
+// Convert string to camel case
+const toCamelCase = (str) => str.replace(/([-_][a-z])/gi, ($1) => $1.toUpperCase().replace('-', '').replace('_', ''));
