@@ -319,7 +319,7 @@ const XO = (str) => {
 	let x = str.match(/x/gi);
 	let o = str.match(/o/gi);
 	return (x && x.length) === (o && o.length);
-}
+};
 
 // Isograms
 const isIsogram = (str) => !str.match(/(\w).*\1/i);
@@ -332,7 +332,10 @@ const countBits = (n) => {
 		n = Math.floor(n / 2);
 	}
 	return count;
-}
+};
 
 // Convert string to camel case
-const toCamelCase = (str) => str.replace(/([-_][a-z])/gi, ($1) => $1.toUpperCase().replace('-', '').replace('_', ''));
+const toCamelCase = (str) =>
+	str.replace(/([-_][a-z])/gi, ($1) =>
+		$1.toUpperCase().replace('-', '').replace('_', '')
+	);
