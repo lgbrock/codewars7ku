@@ -351,3 +351,9 @@ const DNAStrand = (dna) => {
 	};
 	return arr.map((v) => obj[v]).join``;
 }
+
+// Detect Pangram
+const isPangram = (str) => {
+	let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+	return alphabet.split``.every((v) => str.toLowerCase().indexOf(v) !== -1);
+}
