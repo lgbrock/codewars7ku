@@ -339,3 +339,15 @@ const toCamelCase = (str) =>
 	str.replace(/([-_][a-z])/gi, ($1) =>
 		$1.toUpperCase().replace('-', '').replace('_', '')
 	);
+
+// Complementary DNA
+const DNAStrand = (dna) => {
+	let arr = dna.split``;
+	let obj = {
+		A: 'T',
+		T: 'A',
+		C: 'G',
+		G: 'C',
+	};
+	return arr.map((v) => obj[v]).join``;
+}
