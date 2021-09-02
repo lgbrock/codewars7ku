@@ -350,10 +350,24 @@ const DNAStrand = (dna) => {
 		G: 'C',
 	};
 	return arr.map((v) => obj[v]).join``;
-}
+};
 
 // Detect Pangram
 const isPangram = (str) => {
 	let alphabet = 'abcdefghijklmnopqrstuvwxyz';
 	return alphabet.split``.every((v) => str.toLowerCase().indexOf(v) !== -1);
-}
+};
+
+// Format a string of names like 'Bart, Lisa & Maggie'
+const list = (names) => {
+	if (names.map((v) => v.name).length > 1)
+		return (
+			names
+				.map((v) => v.name)
+				.slice(0, -1)
+				.join(', ') +
+			' & ' +
+			names.map((v) => v.name).slice(-1)
+		);
+	return names.map((v) => v.name).slice(-1) + '';
+};
