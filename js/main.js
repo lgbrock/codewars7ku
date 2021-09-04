@@ -381,3 +381,13 @@ const solution = (str) => {
 
 	return arr.map((v) => (v.length === 1 ? v + '_' : v));
 };
+
+// Where my anagrams at?
+const anagrams = (word, words) => {
+	let arr = [];
+	let sorted = word.split``.sort().join``;
+	words.forEach((v) => {
+		if (v.split``.sort().join`` === sorted) arr.push(v);
+	});
+	return arr;
+};
