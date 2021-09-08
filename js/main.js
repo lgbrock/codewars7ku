@@ -411,3 +411,5 @@ const formatDuration = (seconds) => {
 		? res.join(', ').replace(/,([^,]*)$/, ' and' + '$1')
 		: res[0];
 };
+
+// Quick update
