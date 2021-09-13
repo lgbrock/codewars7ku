@@ -412,4 +412,8 @@ const formatDuration = (seconds) => {
 		: res[0];
 };
 
-// Quick update
+// Number of People in the Bus
+const number = (busStops) => {
+	let arr = busStops.map((v) => v[0] - v[1]);
+	return arr.reduce((a, b) => a + b, 0);
+}
