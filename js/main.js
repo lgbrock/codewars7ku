@@ -417,3 +417,11 @@ const number = (busStops) => {
 	let arr = busStops.map((v) => v[0] - v[1]);
 	return arr.reduce((a, b) => a + b, 0);
 }
+
+// Beginner Series #3 Sum of Numbers
+const getSum = (a, b) => {
+	let min = Math.min(a, b),
+		max = Math.max(a, b);
+	return (max + min) * (max - min + 1) / 2;
+};
+
