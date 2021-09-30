@@ -416,12 +416,21 @@ const formatDuration = (seconds) => {
 const number = (busStops) => {
 	let arr = busStops.map((v) => v[0] - v[1]);
 	return arr.reduce((a, b) => a + b, 0);
-}
+};
 
 // Beginner Series #3 Sum of Numbers
 const getSum = (a, b) => {
 	let min = Math.min(a, b),
 		max = Math.max(a, b);
-	return (max + min) * (max - min + 1) / 2;
+	return ((max + min) * (max - min + 1)) / 2;
 };
 
+// Growth of a Population
+const nbYear = (p0, percent, aug, p) => {
+	let year = 0;
+	while (p0 < p) {
+		year++;
+		p0 = p0 + p0 * (percent / 100) + aug;
+	}
+	return year;
+};
