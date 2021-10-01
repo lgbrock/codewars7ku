@@ -443,4 +443,5 @@ const digital_root = (n) => {
 		n = Math.floor(n / 10);
 	}
 	return sum > 9 ? digital_root(sum) : sum;
-}
+};
+
