@@ -445,4 +445,13 @@ const digital_root = (n) => {
 	return sum > 9 ? digital_root(sum) : sum;
 };
 
-// Quick Update
+// Stop gninnipS My sdroW!
+const spinWords = (s) => {
+	return s
+		.split(' ')
+		.map((v) => {
+			if (v.length > 4) return v.split('').reverse().join('');
+			return v;
+		})
+		.join(' ');
+};
