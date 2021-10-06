@@ -462,3 +462,6 @@ String.prototype.toJadenCase = function () {
 		.map((v) => v[0].toUpperCase() + v.slice(1))
 		.join(' ');
 };
+
+// List Filtering
+const filter_list = (l) => l.filter((v) => typeof v === 'number');
