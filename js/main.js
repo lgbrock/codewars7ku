@@ -465,3 +465,9 @@ String.prototype.toJadenCase = function () {
 
 // List Filtering
 const filter_list = (l) => l.filter((v) => typeof v === 'number');
+
+// Sum of two lowest positive integers
+const sumTwoSmallestNumbers = (nums) => {
+	let arr = nums.sort((a, b) => a - b);
+	return arr[0] + arr[1];
+}
