@@ -470,4 +470,17 @@ const filter_list = (l) => l.filter((v) => typeof v === 'number');
 const sumTwoSmallestNumbers = (nums) => {
 	let arr = nums.sort((a, b) => a - b);
 	return arr[0] + arr[1];
-}
+};
+
+// Take a Ten Minute Walk
+const isValidWalk = (walk) => {
+	let x = 0,
+		y = 0;
+	walk.forEach((v) => {
+		if (v === 'n') y++;
+		if (v === 's') y--;
+		if (v === 'e') x++;
+		if (v === 'w') x--;
+	});
+	return walk.length === 10 && x === 0 && y === 0;
+};
