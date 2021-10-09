@@ -484,3 +484,12 @@ const isValidWalk = (walk) => {
 	});
 	return walk.length === 10 && x === 0 && y === 0;
 };
+
+// Unique In Order
+const uniqueInOrder = (iterable) => {
+	let arr = [];
+	for (let i = 0; i < iterable.length; i++) {
+		if (arr[arr.length - 1] !== iterable[i]) arr.push(iterable[i]);
+	}
+	return arr;
+};
