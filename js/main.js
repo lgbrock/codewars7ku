@@ -493,3 +493,15 @@ const uniqueInOrder = (iterable) => {
 	}
 	return arr;
 };
+
+// IQ Test
+const iqTest = (nums) => {
+	nums = nums.split` `.map((v) => parseInt(v));
+
+	let odd = nums.filter((v) => v % 2 === 1);
+	let even = nums.filter((v) => v % 2 === 0);
+
+	return odd.length < even.length
+		? nums.indexOf(odd[0]) + 1
+		: nums.indexOf(even[0]) + 1;
+};
