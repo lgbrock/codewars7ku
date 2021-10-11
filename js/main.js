@@ -505,3 +505,23 @@ const iqTest = (nums) => {
 		? nums.indexOf(odd[0]) + 1
 		: nums.indexOf(even[0]) + 1;
 };
+
+// Friend or Foe?
+// create list of friends and if they have exactly for letters, they are your friend, if not, they are your foe
+// inputs = ['Ryan', 'Kieran', 'Jason', 'Yous'];
+// output = ['Ryan', 'Yous'];
+const friend = (friends) => {
+	// set data to an array of friends
+	let arr = [];
+	// loop over each name in the array
+	for (let i = 0; i < friends.length; i++) {
+		// if the name has exactly 4 letters, push it to the new array
+		if (friends[i].length === 4) {
+			arr.push(friends[i]);
+		}
+	}
+	// return the new array
+	return arr;
+};
+
+const friend = (friends) => friends.filter((v) => v.length === 4);
