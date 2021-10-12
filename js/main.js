@@ -525,3 +525,29 @@ const friend = (friends) => {
 };
 
 const friend = (friends) => friends.filter((v) => v.length === 4);
+
+// Categorize New Member
+// categorize member by age and handicap
+// boolean - is he over 55 and have a handicap between -2 and 26
+// inputs = age and handicap
+// output = true or false - Open or Senior
+const openOrSenior = (data) => {
+	// set to array of members
+	let arr = [];
+	// loop over each member
+	for (let i = 0; i < data.length; i++) {
+		// age > 55 and handicap between -2 and 26 return senior else open
+		if (member[0] > 54 && member[1] > 6) {
+			arr.push('Senior');
+		} else {
+			arr.push('Open');
+		}
+	}
+	// return the new array
+	return arr;
+};
+
+const openOrSenior = (data) =>
+	data.map(([age, handicap]) =>
+		age >= 55 && handicap > 7 ? 'Senior' : 'Open'
+	);
