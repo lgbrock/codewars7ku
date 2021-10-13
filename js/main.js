@@ -551,3 +551,10 @@ const openOrSenior = (data) =>
 	data.map(([age, handicap]) =>
 		age >= 55 && handicap > 7 ? 'Senior' : 'Open'
 	);
+
+// Two to One
+// look through two stings and combine letters into one string without Duplicates
+// inputs = two strings = (s1, s2)
+// output = one string = (s1 + s2)
+// sort from left to right abc...xyz
+const longest = (s1, s2) => [... new Set(s1 + s2)].sort().join``;
