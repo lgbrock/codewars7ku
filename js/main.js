@@ -557,4 +557,41 @@ const openOrSenior = (data) =>
 // inputs = two strings = (s1, s2)
 // output = one string = (s1 + s2)
 // sort from left to right abc...xyz
-const longest = (s1, s2) => [... new Set(s1 + s2)].sort().join``;
+const longest = (s1, s2) => [...new Set(s1 + s2)].sort().join``;
+
+// Get the mean of an array
+// return average of array
+// round down to nearest integer
+const getAverage = (marks) => {
+	let sum = 0;
+
+	for (let i = 0; i < marks.length; i++) {
+		sum += marks[i];
+	}
+	return Math.floor(sum / marks.length);
+};
+
+const getAverage = (marks) =>
+	Math.floor(marks.reduce((a, b) => a + b) / marks.length);
+
+// Moving Zeros To The End
+// move all zeros to the end of the array
+// inputs can be boolean, string, number, array
+// console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"])); // [false, 1, 1, 2, 1, 3, "a", 0, 0]
+// console.log(moveZeros([1, 2, 0, 1, 0, 1, 0, 3, "a"])); // [1, 2, 1, 3, "a", 0, 0, 0, 0]
+
+const moveZeros = (arr) => {
+	let zeros = [];
+	let nonZeros = [];
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] === 0) {
+			zeros.push(arr[i]);
+		} else {
+			nonZeros.push(arr[i]);
+		}
+	}
+	return [...nonZeros, ...zeros];
+};
+
+const moveZeros = (arr) =>
+	arr.filter((v) => v !== 0).concat(arr.filter((v) => v === 0));
