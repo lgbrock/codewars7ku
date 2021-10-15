@@ -595,3 +595,12 @@ const moveZeros = (arr) => {
 
 const moveZeros = (arr) =>
 	arr.filter((v) => v !== 0).concat(arr.filter((v) => v === 0));
+
+// Is n divisible by x and y?
+// inputs = n, x, y
+// output = true or false
+// n is divisible by x and y
+// (isDivisible(3,3,4),false);
+// (isDivisible(12,3,4),true);
+
+const isDivisible = (n, x, y) => n % x === 0 && n % y === 0;
