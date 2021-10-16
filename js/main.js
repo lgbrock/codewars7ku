@@ -604,3 +604,11 @@ const moveZeros = (arr) =>
 // (isDivisible(12,3,4),true);
 
 const isDivisible = (n, x, y) => n % x === 0 && n % y === 0;
+
+// String ends with?
+// inputs = string, end
+// output = true or false
+// check if first argument ends with second argument
+// (endsWith('abc', 'bc'), true);
+// (endsWith('abc', 'd'), false);
+const solution = (str, ending) => str.endsWith(ending)
