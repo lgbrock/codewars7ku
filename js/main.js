@@ -611,4 +611,13 @@ const isDivisible = (n, x, y) => n % x === 0 && n % y === 0;
 // check if first argument ends with second argument
 // (endsWith('abc', 'bc'), true);
 // (endsWith('abc', 'd'), false);
-const solution = (str, ending) => str.endsWith(ending)
+const solution = (str, ending) => str.endsWith(ending);
+
+// Reverse words
+// reverse words in a string
+// inputs = string
+// output = string
+// reverseWords('The quick brown fox jumps over the lazy dog.'), 'ehT kciuq nworb xof spmuj revo eht yzal .god')
+// reverseWords('apple'), 'elppa'
+const reverseWords = (str) =>
+	str.split``.reverse().join``.split` `.reverse().join` `;
