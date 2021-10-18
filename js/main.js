@@ -621,3 +621,17 @@ const solution = (str, ending) => str.endsWith(ending);
 // reverseWords('apple'), 'elppa'
 const reverseWords = (str) =>
 	str.split``.reverse().join``.split` `.reverse().join` `;
+
+// Ones and zeros
+// Convert and array to its binary representation
+// inputs = array of numbers
+// output = binary representation of array
+// binaryArrayToNumber([0,0,0,1]), 1
+// binaryArrayToNumber([0,0,1,0]), 2
+const binaryArrayToNumber = (arr) => {
+	let sum = 0
+	for (let i = 0; i < arr.length; i++) {
+		sum += arr[i] * Math.pow(2, arr.length - i - 1);
+	}
+	return sum;
+}
