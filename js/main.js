@@ -629,9 +629,24 @@ const reverseWords = (str) =>
 // binaryArrayToNumber([0,0,0,1]), 1
 // binaryArrayToNumber([0,0,1,0]), 2
 const binaryArrayToNumber = (arr) => {
-	let sum = 0
+	let sum = 0;
 	for (let i = 0; i < arr.length; i++) {
 		sum += arr[i] * Math.pow(2, arr.length - i - 1);
 	}
 	return sum;
-}
+};
+
+// Remove the minimum
+// remove the smallest value in the array
+// inputs = array of numbers
+// output = array of numbers without the smallest value
+// removeSmallest([1,2,3,4,5]) // [2,3,4,5]
+// removeSmallest([5,3,2,1,4]) // [5,3,2,4]
+const removeSmallest = (nums) => {
+	// find the smallest number
+	let smallest = nums.indexOf(Math.min(...nums));
+	// remove the smallest number
+	nums.splice(smallest, 1);
+	// return the new array
+	return nums;
+};
