@@ -677,3 +677,5 @@ const isAnagram = (test, original) => {
 const isAnagram = (test, original) =>
 	test.toLowerCase().split``.sort().join`` ===
 	original.toLowerCase().split``.sort().join``;
+
+// Quick update
