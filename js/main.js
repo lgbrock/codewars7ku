@@ -650,3 +650,30 @@ const removeSmallest = (nums) => {
 	// return the new array
 	return nums;
 };
+
+// Sot Numbers
+// sort numbers in an array
+// inputs = array of numbers
+// output = array of numbers sorted
+// if null or empty return an empty array
+// sortNumbers([1,2,10,50,5]) // [1,2,5,10,50]
+const solution = (nums) => (!nums ? [] : nums.sort((a, b) => a - b));
+
+// Anagram Detection
+// inputs = two strings
+// output = true or false
+// check if the two strings are anagrams of each other
+// (anagram('rail safety', 'fairy tales'), true);
+// (anagram('RAIL! SAFETY!', 'fairy tales'), true);
+// (anagram('Hi there', 'Bye there'), false);
+const isAnagram = (test, original) => {
+	// sort both strings
+	let sortedTest = test.toLowerCase().split``.sort().join``;
+	let sortedOriginal = original.toLowerCase().split``.sort().join``;
+	// return true or false
+	return sortedTest === sortedOriginal;
+};
+
+const isAnagram = (test, original) =>
+	test.toLowerCase().split``.sort().join`` ===
+	original.toLowerCase().split``.sort().join``;
