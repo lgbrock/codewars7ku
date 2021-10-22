@@ -678,4 +678,9 @@ const isAnagram = (test, original) =>
 	test.toLowerCase().split``.sort().join`` ===
 	original.toLowerCase().split``.sort().join``;
 
-// Quick update
+// No oddities here
+// inputs = array of numbers
+// output = array of numbers without odd numbers
+// noOdds([1,2,3,4,5,6]) // [2,4,6]
+// noOdds([4,5,6,7,8,9,10,11,12,13,14]) // [4,8,12,16]
+const noOdds = (values) => values.filter((v) => v % 2 === 0);
