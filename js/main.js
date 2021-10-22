@@ -684,3 +684,22 @@ const isAnagram = (test, original) =>
 // noOdds([1,2,3,4,5,6]) // [2,4,6]
 // noOdds([4,5,6,7,8,9,10,11,12,13,14]) // [4,8,12,16]
 const noOdds = (values) => values.filter((v) => v % 2 === 0);
+
+// Sum of all the multiples of 3 or 5
+// inputs = number
+// output = sum of all multiples of 3 or 5
+// sumOfMultiples(10) // 23
+// sumOfMultiples(5) // 8
+const findSum = (n) => {
+	// set sum to 0
+	let sum = 0;
+	// loop from 1 to n
+	for (let i = 1; i < n; i++) {
+		// if i is a multiple of 3 or 5 add to sum
+		if (i % 3 === 0 || i % 5 === 0) {
+			sum += i;
+		}
+	}
+	// return sum
+	return sum;
+};
