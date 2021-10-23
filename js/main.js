@@ -703,3 +703,5 @@ const findSum = (n) => {
 	// return sum
 	return sum;
 };
+
+// Quick update
