@@ -704,4 +704,4 @@ const findSum = (n) => {
 	return sum;
 };
 
-// Quick update
+// another quick update
