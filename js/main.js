@@ -704,4 +704,9 @@ const findSum = (n) => {
 	return sum;
 };
 
-// another quick update
+// Sort array by string length
+// inputs = array of strings
+// output = array of strings sorted by length
+// All strings are of different lengths
+// sortByLength(['Beg', 'Life', 'I', 'To']) // ['I', 'To', 'Beg', 'Life']
+const sortByLength = (array) => array.sort((a, b) => a.length - b.length);
