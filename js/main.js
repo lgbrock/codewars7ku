@@ -710,4 +710,4 @@ const findSum = (n) => {
 // All strings are of different lengths
 // sortByLength(['Beg', 'Life', 'I', 'To']) // ['I', 'To', 'Beg', 'Life']
 
-// quick update while working on assessment
+// quick update - finished assessment
