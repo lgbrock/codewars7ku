@@ -710,4 +710,9 @@ const findSum = (n) => {
 // All strings are of different lengths
 // sortByLength(['Beg', 'Life', 'I', 'To']) // ['I', 'To', 'Beg', 'Life']
 
-// quick update - finished assessment
+// Two Oldest Ages
+// inputs = array of numbers
+// output = array of two oldest ages
+// if there are two or more of the oldest age, return both
+// twoOldestAges([1, 5, 87, 45, 8, 8]) // [45, 87]
+const twoOldestAges = (ages) => ages.sort((a, b) => a - b).slice(-2);
