@@ -717,4 +717,12 @@ const findSum = (n) => {
 // twoOldestAges([1, 5, 87, 45, 8, 8]) // [45, 87]
 const twoOldestAges = (ages) => ages.sort((a, b) => a - b).slice(-2);
 
-// Quick update
+// Qdd or Even?
+// sum all numbers in array to determine if odd or even
+// inputs = array of numbers
+// output = odd or even
+// if all numbers are even return 'even'
+// if all numbers are odd return 'odd'
+// oddOrEven([0,1,4]) // 'odd
+// oddOrEven([0, -1, -5]) // 'even'
+const oddOrEven = (arr) => arr.length === 0 ? 'even' : arr.reduce((a, b) => a + b) % 2 === 0 ? 'even' : 'odd';
