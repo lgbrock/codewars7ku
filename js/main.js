@@ -725,4 +725,11 @@ const twoOldestAges = (ages) => ages.sort((a, b) => a - b).slice(-2);
 // if all numbers are odd return 'odd'
 // oddOrEven([0,1,4]) // 'odd
 // oddOrEven([0, -1, -5]) // 'even'
-const oddOrEven = (arr) => arr.length === 0 ? 'even' : arr.reduce((a, b) => a + b) % 2 === 0 ? 'even' : 'odd';
+const oddOrEven = (arr) =>
+	arr.length === 0
+		? 'even'
+		: arr.reduce((a, b) => a + b) % 2 === 0
+		? 'even'
+		: 'odd';
+
+// Quick update
