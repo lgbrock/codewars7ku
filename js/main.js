@@ -732,4 +732,11 @@ const oddOrEven = (arr) =>
 		? 'even'
 		: 'odd';
 
-// Quick update again
+// Find the middle element
+// return the index of the numerical element that lies between the other two elements
+// inputs = array of numbers
+// output = index of the middle element
+// gimme([2, 3, 1]) => 0
+// gimme([5, 10, 14]) => 1
+const gimme = (inputArray) =>
+	[...inputArray].indexOf(inputArray.sort((a, b) => a - b)[1]);
