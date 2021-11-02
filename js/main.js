@@ -740,3 +740,5 @@ const oddOrEven = (arr) =>
 // gimme([5, 10, 14]) => 1
 const gimme = (inputArray) =>
 	[...inputArray].indexOf(inputArray.sort((a, b) => a - b)[1]);
+
+// Quick update
