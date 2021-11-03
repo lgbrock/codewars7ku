@@ -741,4 +741,21 @@ const oddOrEven = (arr) =>
 const gimme = (inputArray) =>
 	[...inputArray].indexOf(inputArray.sort((a, b) => a - b)[1]);
 
-// Quick update
+// Return String of First Characters
+// inputs = string
+// output = first character of each word in string
+// firstChar('hello') // 'h'
+// firstChar("This Is A Test") // "TIAT"
+const makeString = (str) => {
+	// split string into array of words
+	let words = str.split` `;
+	// set result to empty string
+	let result = '';
+	// loop through words
+	for (let i = 0; i < words.length; i++) {
+		// add first character of each word to result
+		result += words[i][0];
+	}
+	// return result
+	return result;
+};
