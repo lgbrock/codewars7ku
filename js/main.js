@@ -759,3 +759,10 @@ const makeString = (str) => {
 	// return result
 	return result;
 };
+
+// Find the Remainder
+// inputs = two numbers
+// output = remainder of the larger number divided by the smaller number
+// remainder(17, 5) // 2
+// remainder(5, 17) // 2
+const remainder = (a, b) => (a > b ? a % b : b % a);
