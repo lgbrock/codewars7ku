@@ -767,4 +767,37 @@ const makeString = (str) => {
 // remainder(5, 17) // 2
 const remainder = (a, b) => (a > b ? a % b : b % a);
 
-// Quick update
+// Fizz Buzz
+// inputs = number
+// output = array with numbers and string
+// if number is divisible by 3 return 'Fizz'
+// if number is divisible by 5 return 'Buzz'
+// if number is divisible by both 3 and 5 return 'FizzBuzz'
+// if number is not divisible by 3 or 5 return number
+// fizzBuzz(3) // [1,2,'Fizz']
+// fizzBuzz(5) // [1,2,'Fizz','4','Buzz']
+const fizzBuzz = (n) => {
+	// set result to empty array
+	let result = [];
+	// loop from 1 to n
+	for (let i = 1; i <= n; i++) {
+		// if i is divisible by 3 and 5 add 'FizzBuzz' to result
+		if (i % 3 === 0 && i % 5 === 0) {
+			result.push('FizzBuzz');
+		}
+		// if i is divisible by 3 add 'Fizz' to result
+		else if (i % 3 === 0) {
+			result.push('Fizz');
+		}
+		// if i is divisible by 5 add 'Buzz' to result
+		else if (i % 5 === 0) {
+			result.push('Buzz');
+		}
+		// if i is not divisible by 3 or 5 add i to result
+		else {
+			result.push(i);
+		}
+	}
+	// return result
+	return result;
+}
