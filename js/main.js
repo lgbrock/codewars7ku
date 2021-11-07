@@ -800,4 +800,23 @@ const fizzBuzz = (n) => {
 	}
 	// return result
 	return result;
-}
+};
+
+// Simple Fun #176: Reverse Letter
+// inputs = string of letters and numbers
+// output = string with letters reversed and numbers omitted
+// reverseLetter('krishan') // 'nahsirk'
+// reverseLetter('ultr53o?n') // 'nortlu'
+const reverseLetter = (str) => {
+	// set result to empty string
+	let result = '';
+	// loop through str
+	for (let i = 0; i < str.length; i++) {
+		// if str[i] is a letter add it to result
+		if (str[i].match(/[a-z]/i)) {
+			result += str[i];
+		}
+	}
+	// return result
+	return result.split``.reverse().join``;
+};
