@@ -820,3 +820,5 @@ const reverseLetter = (str) => {
 	// return result
 	return result.split``.reverse().join``;
 };
+
+// quick update while on vacay
