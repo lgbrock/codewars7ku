@@ -821,4 +821,25 @@ const reverseLetter = (str) => {
 	return result.split``.reverse().join``;
 };
 
-// Quick update
+// Summing a number's digits
+// inputs = number
+// output = sum of the digits of the number
+// sum of the absolute value of each of the number's decimal digits
+// sumDigits(10) // 1
+// sumDigits(99) // 18
+const sumDigits = (num) => {
+	// set result to 0
+	let result = 0;
+	// loop through num
+	for (let i = 0; i < num.toString().length; i++) {
+		// add num[i] to result
+		result += Math.abs(num[i]);
+	}
+	// return result
+	return result;
+};
+const sumDigits = (num) =>
+	Math.abs(num)
+		.toString()
+		.split('')
+		.reduce((total, next) => total + Number(next), 0);
