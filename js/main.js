@@ -844,4 +844,11 @@ const sumDigits = (num) =>
 		.split('')
 		.reduce((total, next) => total + Number(next), 0);
 
-// Quick update
+// Small enough? - Beginner
+// inputs = number and array of numbers
+// output = boolean
+// if number is less than or equal to the sum of all numbers in the array return true
+// if number is greater than the sum of all numbers in the array return false
+// smallEnough(5, [1, 2, 5, 3]) // false
+// smallEnough(4, [1, 2, 5, 3]) // true
+const smallEnough = (a, limit) => a.every((v) => v <= limit);
