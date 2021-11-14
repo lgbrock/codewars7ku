@@ -853,4 +853,4 @@ const sumDigits = (num) =>
 // smallEnough(4, [1, 2, 5, 3]) // true
 const smallEnough = (a, limit) => a.every((v) => v <= limit);
 
-// Quick update
+// Quick update before Full Stack Open
