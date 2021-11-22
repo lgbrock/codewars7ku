@@ -853,4 +853,9 @@ const sumDigits = (num) =>
 // smallEnough(4, [1, 2, 5, 3]) // true
 const smallEnough = (a, limit) => a.every((v) => v <= limit);
 
-// Quick update before practice later
+// JavaScript Array Filter
+// inputs = array of numbers
+// output = array of numbers that are divisible by 2
+// filter out all numbers that are not divisible by 2
+// filterArray([1, 2, 3]) // [2]
+const filterArray = (arr) => arr.filter((v) => v % 2 === 0);
