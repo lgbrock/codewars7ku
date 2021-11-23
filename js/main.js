@@ -859,3 +859,22 @@ const smallEnough = (a, limit) => a.every((v) => v <= limit);
 // filter out all numbers that are not divisible by 2
 // filterArray([1, 2, 3]) // [2]
 const filterArray = (arr) => arr.filter((v) => v % 2 === 0);
+
+// Find the capitals
+// input = sting of single word
+// output = Ordered list containing indexes of capital letters in words
+// capitals('USA') // [0, 1, 2]
+// capitals('CodEWaRs'), [0,3,4,6] )
+const capitals = (word) => {
+	// set result to empty array
+	let result = [];
+	// loop through word
+	for (let i = 0; i < word.length; i++) {
+		// if word[i] is a capital letter add i to result
+		if (word[i].match(/[A-Z]/)) {
+			result.push(i);
+		}
+	}
+	// return result
+	return result;
+};
