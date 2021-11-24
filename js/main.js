@@ -878,3 +878,5 @@ const capitals = (word) => {
 	// return result
 	return result;
 };
+
+// Quick update
