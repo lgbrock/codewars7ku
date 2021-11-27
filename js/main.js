@@ -879,4 +879,23 @@ const capitals = (word) => {
 	return result;
 };
 
-// Quick update again
+// Alternate capitalization
+// input = string
+// output = string with alternating capitalization
+// capitalize("abc") // "AbC"
+// capitalize("abc def") // "aBc DeF"
+const capitalize = (str) => {
+	// loop through string
+	// capitalize every other letter
+	[
+		str
+			.split('')
+			.map((v, i) => (i % 2 == 0 ? v.toUpperCase() : v.toLowerCase()))
+			.join(''),
+		str
+			.split('')
+			.map((v, i) => (i % 2 !== 0 ? v.toUpperCase() : v.toLowerCase()))
+			.join(''),
+	];
+	return str;
+};
