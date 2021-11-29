@@ -899,3 +899,14 @@ const capitalize = (str) => {
 	];
 	return str;
 };
+
+// The Coupon Code
+// input = string
+// output = boolean
+// if string is a valid coupon code return true
+// if string is not a valid coupon code return false
+// checkCoupon("123", "123", "July 9, 2015", "July 9, 2015")  ===  true
+// checkCoupon("123", "123", "July 9, 2015", "July 9, 2015")  ===  false
+const checkCoupon = (enteredCode, correctCode, currentDate, expirationDate) =>
+	enteredCode === correctCode &&
+	Date.parse(currentDate) <= Date.parse(expirationDate);
