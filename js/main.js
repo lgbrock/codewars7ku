@@ -910,3 +910,10 @@ const capitalize = (str) => {
 const checkCoupon = (enteredCode, correctCode, currentDate, expirationDate) =>
 	enteredCode === correctCode &&
 	Date.parse(currentDate) <= Date.parse(expirationDate);
+
+// Thinkful - String Drills: Repeater
+// inputs = string and number
+// output = string with number of times string repeated
+// repeater("*", 3) // "***"
+// repeater("a", 5) // "aaaaa"
+const repeater = (str, num) => str.repeat(num);
