@@ -917,3 +917,24 @@ const checkCoupon = (enteredCode, correctCode, currentDate, expirationDate) =>
 // repeater("*", 3) // "***"
 // repeater("a", 5) // "aaaaa"
 const repeater = (str, num) => str.repeat(num);
+
+// Predict your age!
+// inputs = numbers
+// output = number
+// multiply each number by itself
+// add all numbers together
+// Take the square root of the result
+// divide the result by 2
+// round the result to nearest integer
+// predictAge(65, 60, 75, 55, 60, 63, 64, 45) === 86
+const predictAge = (age1, age2, age3, age4, age5, age6, age7, age8) => {
+	let arr = [age1, age2, age3, age4, age5, age6, age7, age8]
+		.map((num) => {
+			return num * num;
+		})
+		.reduce((a, b) => {
+			return (a += b);
+		});
+
+	return Math.floor(Math.sqrt(arr) / 2);
+};
