@@ -938,3 +938,16 @@ const predictAge = (age1, age2, age3, age4, age5, age6, age7, age8) => {
 
 	return Math.floor(Math.sqrt(arr) / 2);
 };
+
+// Remove anchor from URL
+// input = string
+// output = string with anchor(#) removed
+// removeAnchor("www.codewars.com#about") // "www.codewars.com"
+// removeAnchor("www.codewars.com?page=1") // "www.codewars.com?page=1"
+const removeUrlAnchor = (url) => {
+	// split url into array
+	let arr = url.split('#');
+	// return first element of array
+	return arr[0];
+};
+const removeUrlAnchor = (url) => url.split('#')[0];
