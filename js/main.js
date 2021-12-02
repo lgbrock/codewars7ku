@@ -951,3 +951,9 @@ const removeUrlAnchor = (url) => {
 	return arr[0];
 };
 const removeUrlAnchor = (url) => url.split('#')[0];
+
+// Greet Me
+// input = string
+// output = string
+const greet = (name) =>
+	`Hello ${name.slice(0, 1).toUpperCase()}${name.slice(1).toLowerCase()}!`;
