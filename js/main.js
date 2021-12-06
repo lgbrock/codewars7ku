@@ -958,4 +958,8 @@ const removeUrlAnchor = (url) => url.split('#')[0];
 const greet = (name) =>
 	`Hello ${name.slice(0, 1).toUpperCase()}${name.slice(1).toLowerCase()}!`;
 
-// Project Planning - FSO
+// Sort arrays - 1
+// input = name - unsorted array
+// output = name - sorted array
+// sort the array
+const sortme = (names) => names.sort();
