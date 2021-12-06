@@ -958,4 +958,4 @@ const removeUrlAnchor = (url) => url.split('#')[0];
 const greet = (name) =>
 	`Hello ${name.slice(0, 1).toUpperCase()}${name.slice(1).toLowerCase()}!`;
 
-// Project Planning
+// Project Planning - FSO
