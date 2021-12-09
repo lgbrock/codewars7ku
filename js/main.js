@@ -983,3 +983,17 @@ const queueTime = (customers, n) => {
 	// return sum of array
 	return arr.reduce((a, b) => a + b);
 };
+
+// Find the next perfect square!
+// input = number
+// output = number
+// Return the next square if sq is a perfect square, -1 otherwise
+// isSquare(121) // returns 144
+// isSquare(625) // returns 676
+// isSquare(114) // returns -1
+const findNextSquare = (sq) => {
+	// get square root of sq
+	let root = Math.sqrt(sq);
+	// if square root is an integer return next square
+	return root % 1 === 0 ? Math.pow(root + 1, 2) : -1;
+};
