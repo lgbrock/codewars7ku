@@ -963,3 +963,23 @@ const greet = (name) =>
 // output = name - sorted array
 // sort the array
 const sortme = (names) => names.sort();
+
+// The Supermarket Queue
+// total time required for all customers to check out
+// inputs = array of positive integers and its value represents the time required for that customer to check out
+// output = integer
+// add all the integers in the array together
+// return the sum of the integers in the array
+// queueTime([1,2,3,4], 1), 10)
+// queueTime([2,2,3,3,4,4], 2), 9)
+const queueTime = (customers, n) => {
+	// set new array to zero
+	let arr = new Array(n).fill(0);
+	// loop through customers
+	for (let i = 0; i < customers.length; i++) {
+		let index = arr.indexOf(Math.min(...arr));
+		arr[index] += customers[i];
+	}
+	// return sum of array
+	return arr.reduce((a, b) => a + b);
+};
