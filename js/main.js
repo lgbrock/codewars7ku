@@ -997,3 +997,5 @@ const findNextSquare = (sq) => {
 	// if square root is an integer return next square
 	return root % 1 === 0 ? Math.pow(root + 1, 2) : -1;
 };
+
+// Quick update
