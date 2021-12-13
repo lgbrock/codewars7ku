@@ -998,4 +998,23 @@ const findNextSquare = (sq) => {
 	return root % 1 === 0 ? Math.pow(root + 1, 2) : -1;
 };
 
-// Another quick update
+// Printer Errors
+// input = string
+// output = integer
+// count the number of characters in string that are not a to m
+// print the number of errors then total number of characters
+// printerError("aaabbbbhaijjjm") // "0/14"
+// printerError("aaaxbbbbyyhwawiwjjjwwm") // "8/22"
+const printerError = (str) => {
+	// set count to zero
+	let count = 0;
+	// loop through string
+	for (let i = 0; i < str.length; i++) {
+		// if string[i] is not a to m add one to count
+		if (str[i].match(/[n-z]/)) {
+			count++;
+		}
+	}
+	// return count and string length
+	return `${count}/${str.length}`;
+};
